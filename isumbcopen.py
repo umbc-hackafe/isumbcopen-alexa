@@ -35,6 +35,8 @@ def get_status():
             res = requests.get("http://isumbcopen.com/api")
             if res and res.status_code and res.status_code == 200:
                 status = res.text.strip()
+                global last_update
+                last_update = time.time()
         except:
             pass
 
