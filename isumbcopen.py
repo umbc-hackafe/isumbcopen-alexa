@@ -53,4 +53,4 @@ def end(request):
 get_status()
 
 api.add_url_rule('/', 'pyalexa', skill.flask_target, methods=['POST'])
-api.run('0.0.0.0', port=80, debug=True)
+api.run('0.0.0.0', port=8083, debug=False)
